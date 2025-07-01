@@ -1,0 +1,25 @@
+CREATE DATABASE ETL_WORKFLOW_PROJECT; 
+
+use ETL_WORKFLOW_PROJECT;
+
+CREATE TABLE students_performance (
+	-- Unique identifier for each student record, auto-incrementing and primary key
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    -- Gender of the student (e.g., 'male', 'female')
+    gender VARCHAR(50) NOT NULL,
+    -- Race or ethnicity of the student (e.g., 'group A', 'group B', etc.)
+    race_ethnicity VARCHAR(50) NOT NULL,
+    -- Parental level of education (e.g., 'some college', 'high school', 'bachelor's degree')
+    parental_level_of_education VARCHAR(100) NOT NULL,
+    -- Type of lunch (e.g., 'standard', 'free/reduced')
+    lunch VARCHAR(50) NOT NULL,
+    -- Whether the student completed a test preparation course (e.g., 'none', 'completed')
+    test_preparation_course VARCHAR(50) NOT NULL,
+    -- Math score (integer, assuming scores are whole numbers)
+    -- Consider adding a CHECK constraint if scores have a specific range (e.g., 0-100)
+    math_score INT NOT NULL,
+    -- Reading score (integer, assuming scores are whole numbers)
+    reading_score INT NOT NULL,
+    -- Writing score (integer, assuming scores are whole numbers)
+    writing_score INT NOT NULL
+);
